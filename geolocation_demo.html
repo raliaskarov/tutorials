@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geolocation Test</title>
+</head>
+<body>
+  <script>
+    // Define the callback function
+    function displayPosition(position) {
+      console.log("Latitude: " + position.coords.latitude);
+      console.log("Longitude: " + position.coords.longitude);
+    }
+    
+    // Check if geolocation is available and then call getCurrentPosition
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(displayPosition);
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  </script>
+</body>
+</html>
